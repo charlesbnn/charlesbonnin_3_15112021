@@ -29,6 +29,13 @@ header img {
   width: 40%;
 }
 
+header a i {
+  float: left;
+  margin-left: 25px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
 .location, .hero, .fonctionnement, .restaurants, .menu, footer {
   padding: 20px 30px;
 }
@@ -50,6 +57,8 @@ h2 {
   border-radius: 25px;
   padding: 16px;
   border: 0;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .button a {
@@ -60,6 +69,7 @@ h2 {
   text-decoration: none;
 }
 
+/*ACCEUIL*/
 .location, .hero {
   text-align: center;
 }
@@ -224,6 +234,20 @@ h2 {
      object-fit: cover;
 }
 
+.restaurants__card a.new::before {
+  content: 'Nouveau';
+  padding: 8px;
+  color: #008766;
+  background-color: #99E2D0;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  width: 70px;
+  position: absolute;
+  right: 35px;
+  margin-top: 15px;
+}
+
 a .restaurants__pres {
   padding: 15px;
   background-color: white;
@@ -252,22 +276,189 @@ a .restaurants__pres > .restaurants__txt > .restaurants__byline {
   font-weight: lighter;
 }
 
+a .restaurants__pres > .restaurants__fav {
+  width: 50px;
+  text-align: center;
+  padding-top: 15px;
+}
+
 a .restaurants__pres > .restaurants__fav i {
-  display: inline;
-  vertical-align: middle;
+  font-size: 25px;
+}
+
+/*RESTAURANTS*/
+main img {
+  max-width: 100%;
+  z-index: 10;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  z-index: 20;
+  margin-top: -75px;
+  position: relative;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  font-family: "Roboto", "Arial", "Sans-Serif";
+}
+
+.menu__title {
+  margin-top: 10px;
+  font-size: 28px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-family: "Shrikhand", "Arial", "Sans-Serif";
+}
+
+.menu > i {
+  float: right;
+  margin-top: 10px;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+.menu__etape h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.menu__etape h3::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  position: relative;
+  top: 25px;
+  left: 0;
+  background-color: #99E2D0;
+}
+
+.menu__item li {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+}
+
+.menu__item li .menu__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0 0 0;
+}
+
+.menu__item li h4 {
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.menu__item li div.menu__info {
+  margin-bottom: 10px;
+}
+
+.menu__item li div.menu__info .menu__detail {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 75%;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.menu__item li div.menu__info .menu__prix {
+  width: 10%;
+  font-weight: bold;
+}
+
+.menu__item li .select {
+  float: right;
+  visibility: hidden;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #353535;
+}
+
+footer nav p {
+  font-family: "Shrikhand", "Arial", "Sans-Serif";
+  color: #ffffff;
+  font-size: 22px;
+  margin: 20px 0;
+}
+
+footer nav ul li {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+footer nav ul li i {
+  width: 25px;
+}
+
+footer nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /*SPINNER*/
 #loader {
-  padding: 50%;
-  margin: -8px;
-  width: 16px;
-  height: 16px;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+  z-index: 1000;
+  -webkit-animation: loader_animation 1s linear 3s 1 normal forwards;
+          animation: loader_animation 1s linear 3s 1 normal forwards;
+}
+
+#loader {
+  display: none !important;
 }
 
 #loader i {
   display: inline-block;
   font-size: 40px;
   margin: auto;
+  position: absolute;
+  left: calc(50%);
+  top: 50%;
+}
+
+/*ANIMATIONS*/
+@-webkit-keyframes loader_animation {
+  0% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    width: 0;
+  }
+}
+@keyframes loader_animation {
+  0% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    width: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
