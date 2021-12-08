@@ -255,6 +255,9 @@ main img{
     max-width: 100%;
     z-index: 10;
 }
+input[type="checkbox"]{
+     display: none;
+}
 .menu{
     background-color: $bg-1;
     z-index: 20;
@@ -298,43 +301,101 @@ main img{
     &__item li{
         background-color: #ffffff;
         border-radius: 20px;
-        padding: 5px 10px;
+        padding: 0 10px;
         margin-bottom: 15px;
+        display: flex;
+        flex-wrap: no-wrap ;
+        & > div:not(.select){
+            width: 80%;
+            max-width: 100%;
+        }
         .menu__info{
             display: flex;
             flex-wrap: wrap ;
             justify-content: space-between;
             margin: 10px 0 0 0;
         }
-        h4{
+        .menu__name{
             font-size: 18px;
             font-weight: bold;
-            width: 100%;
+            max-width: 100%;
             margin-bottom:5px ;
-        }
-        div.menu__info{
-            margin-bottom: 10px;
-            .menu__detail{
-                white-space: nowrap;
-                overflow: hidden;
+                            white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                width:75% ;
-                font-weight: lighter;
-                font-size: 16px;
+        }
+        .menu__detail{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width:100% ;
+            font-weight: lighter;
+            font-size: 16px;
 
-            }
-            
-            .menu__prix{
-                width:10% ;
-                font-weight: bold;
-            }
+        }
+        
+        .menu__prix{
+            max-width:45px ;
+            width: 30px;
+            min-width: 30px;
+            font-weight: bold;
+            text-align: right;
+        }
+        label.menu__info{
+            margin-bottom: 10px;
+            width:inherit;
+            position: absolute;
+            margin:0;
+            height: 60px;
+           width:80%;
         }
        
         .select{
-            float: right;
-            visibility:hidden ;     
+            
+            width: 0px;
+            opacity: 0;
+            background-color: $tertiare-1;
+            display: inline-block;
+            position: relative;
+            right:0;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin-right: -10px;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 20px 5px;
+            transition: all 250ms linear 0ms 1 normal forwards;
+
+            i{
+                display: inline-block;
+                vertical-align: middle;
+                color: white;
+                margin : 0;
+                border-radius: 50%;
+                padding: 4px;
+                border: 2px solid white;
+                font-size: 14px;
+            }
+            // visibility:hidden ;     
         }
+        input[type="checkbox"]:checked + div.select{
+            animation: select  250ms linear 0ms 1 normal forwards ;
+            & i{
+               animation: rotate 250ms linear 1ms 1 normal forwards ;
+
+            }
+        }
+        // &:hover .select,&:active .select{
+            //     animation: select  250ms linear 0ms 1 normal forwards ;
+
+        // }
+        // &:hover .select i,&:active .select i{
+                    //     animation: rotate 500ms linear 250ms 1 normal forwards ;
+
+        // }
+        // &:hover .menu__prix, &:active .menu__prix{
+        //     animation: select-li 250ms linear 500ms 1 normal forwards ;
+        // }
     }
 }
 
@@ -399,3 +460,24 @@ footer{
          width: 0;
      }
  }
+ @keyframes select {
+     from{
+        width:0px;
+        opacity: 1;
+        margin-left: 0px;
+     }
+     to{
+        opacity: 1;
+        width:60px;
+        margin-left: 5px; 
+     }
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(365deg);
+    }
+}
+
