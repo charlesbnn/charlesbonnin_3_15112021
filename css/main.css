@@ -10,6 +10,10 @@ html {
   height: 100%;
 }
 
+input[type="checkbox"] {
+  display: none;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", "Arial", "Sans-Serif";
@@ -46,12 +50,21 @@ h2 {
   margin-bottom: 25px;
 }
 
-.button {
+a {
+  display: block;
+  width: 250px;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+}
+
+a .button {
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   -webkit-box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
-  max-width: 225px;
+  width: 225px;
   font-size: 16px;
   font-weight: 700;
   border-radius: 25px;
@@ -59,14 +72,14 @@ h2 {
   border: 0;
   text-align: center;
   margin: 0 auto;
+  -webkit-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
 }
 
-.button a {
-  margin: 0;
-  display: block;
-  width: 100%;
-  color: #ffffff;
-  text-decoration: none;
+.hero > a:hover {
+  opacity: 0.9;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 /*ACCEUIL*/
@@ -136,7 +149,7 @@ h2 {
 
 .fonctionnement ul li {
   width: 95%;
-  padding: 20px 30px;
+  padding: 20px 25px;
   margin-top: 20px;
   background-color: #f6f6f6;
   border-radius: 20px;
@@ -155,7 +168,7 @@ h2 {
   color: white;
   font-weight: normal;
   position: relative;
-  right: 40px;
+  right: 35px;
   background-color: #9356DC;
   padding: 6px;
   border-radius: 50%;
@@ -169,7 +182,7 @@ h2 {
   color: white;
   font-weight: normal;
   position: relative;
-  right: 40px;
+  right: 35px;
   background-color: #9356DC;
   padding: 6px;
   border-radius: 50%;
@@ -183,7 +196,7 @@ h2 {
   color: white;
   font-weight: normal;
   position: relative;
-  right: 40px;
+  right: 35px;
   background-color: #9356DC;
   padding: 6px;
   border-radius: 50%;
@@ -195,7 +208,7 @@ h2 {
 .fonctionnement i {
   font-size: 20px;
   width: 20px;
-  margin-right: 30px;
+  margin-right: 10px;
   color: #7e7e7e;
 }
 
@@ -248,6 +261,46 @@ h2 {
   margin-top: 15px;
 }
 
+.restaurants__card .heart_label {
+  width: 25px;
+  height: 25px;
+}
+
+.restaurants__card i.fa-heart, .restaurants__card .heart_label {
+  position: absolute;
+  right: 55px;
+  margin-top: 200px;
+  font-size: 25px;
+}
+
+.restaurants__card i.fa-heart {
+  z-index: 10;
+}
+
+.restaurants__card .heart_label {
+  z-index: 20;
+}
+
+.restaurants__card i.checked {
+  opacity: 0;
+  width: 27px;
+  height: 27px;
+  right: 53px;
+  margin-top: 199px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.restaurants__card input[type="checkbox"].heart_input:checked ~ i.checked {
+  opacity: 1;
+}
+
+.restaurants__card input[type="checkbox"].heart_input:checked ~ i.unchecked {
+  opacity: 0;
+}
+
 a .restaurants__pres {
   padding: 15px;
   background-color: white;
@@ -276,24 +329,10 @@ a .restaurants__pres > .restaurants__txt > .restaurants__byline {
   font-weight: lighter;
 }
 
-a .restaurants__pres > .restaurants__fav {
-  width: 50px;
-  text-align: center;
-  padding-top: 15px;
-}
-
-a .restaurants__pres > .restaurants__fav i {
-  font-size: 25px;
-}
-
 /*RESTAURANTS*/
 main img {
   max-width: 100%;
   z-index: 10;
-}
-
-input[type="checkbox"] {
-  display: none;
 }
 
 .menu {
@@ -306,6 +345,10 @@ input[type="checkbox"] {
   font-family: "Roboto", "Arial", "Sans-Serif";
 }
 
+.menu > a {
+  margin: 0 auto;
+}
+
 .menu__title {
   margin-top: 10px;
   font-size: 28px;
@@ -313,6 +356,10 @@ input[type="checkbox"] {
   letter-spacing: 1px;
   display: inline-block;
   font-family: "Shrikhand", "Arial", "Sans-Serif";
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu > i {
@@ -351,9 +398,36 @@ input[type="checkbox"] {
       flex-wrap: no-wrap;
 }
 
-.menu__item li > div:not(.select) {
-  width: 80%;
-  max-width: 100%;
+.menu__item li:first-child {
+  -webkit-animation: fadein 500ms ease-out 50ms 1 normal forwards;
+          animation: fadein 500ms ease-out 50ms 1 normal forwards;
+}
+
+.menu__item li:nth-child(2) {
+  -webkit-animation: fadein 500ms ease-out 100ms 1 normal forwards;
+          animation: fadein 500ms ease-out 100ms 1 normal forwards;
+}
+
+.menu__item li:nth-child(3) {
+  -webkit-animation: fadein 500ms ease-out 200ms 1 normal forwards;
+          animation: fadein 500ms ease-out 200ms 1 normal forwards;
+}
+
+.menu__item li:nth-child(4) {
+  -webkit-animation: fadein 500ms ease-out 300ms 1 normal forwards;
+          animation: fadein 500ms ease-out 300ms 1 normal forwards;
+}
+
+.menu__item li > div.menu__lines {
+  min-width: 70%;
+  padding-top: 15px;
+}
+
+.menu__item li > .menu__prix {
+  width: 30%;
+  font-weight: bold;
+  text-align: right;
+  padding-top: 35px;
 }
 
 .menu__item li .menu__info {
@@ -385,14 +459,6 @@ input[type="checkbox"] {
   max-width: 100%;
   font-weight: lighter;
   font-size: 16px;
-}
-
-.menu__item li .menu__prix {
-  max-width: 45px;
-  width: 30px;
-  min-width: 30px;
-  font-weight: bold;
-  text-align: right;
 }
 
 .menu__item li label.menu__info {
@@ -458,6 +524,9 @@ footer nav ul li {
   font-size: 16px;
   color: #ffffff;
   margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer nav ul li i {
@@ -527,7 +596,8 @@ footer nav ul li a {
   }
   to {
     opacity: 1;
-    width: 60px;
+    width: 45px;
+    max-width: 60px;
     margin-left: 5px;
   }
 }
@@ -540,7 +610,8 @@ footer nav ul li a {
   }
   to {
     opacity: 1;
-    width: 60px;
+    width: 45px;
+    max-width: 60px;
     margin-left: 5px;
   }
 }
@@ -564,6 +635,32 @@ footer nav ul li a {
   100% {
     -webkit-transform: rotate(365deg);
             transform: rotate(365deg);
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=main.css.map */

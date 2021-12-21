@@ -28,7 +28,7 @@
             <section class="hero">
                 <h2 class="hero__title">Réservez le menu qui vous convient</h2>
                 <p class="hero__sentence">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <div class="hero__button button"><a href="#">Explorer nos restaurants</a></div>
+                <a href="#"><div class="hero__button button">Explorer nos restaurants</div></a>
             </section>
             <section class="fonctionnement">
                 <h2 class="fonctionnement__title">Fonctionnement</h2>
@@ -47,10 +47,13 @@
                             <div class="restaurants__txt">
                                 <h3 class="restaurants__name">La palette du goût</h3>
                                 <p class="restaurants__byline">Ménilmontant</p>
-                            </div>
-                            <div class="restaurants__fav"><i  class="far fa-heart"></i></div>
+                            </div>   
                         </div>
                     </a>
+                    <input class="heart_input" type="checkbox" name="res_la_palette_du_gout" id="res_la_palette_du_gout" checked>
+                    <label class="heart_label" for="res_la_palette_du_gout"></label>
+                    <i class="far fa-heart unchecked"></i>
+                    <i class="fas fa-heart checked"></i>
                 </article>
                 <article id="la-note-enchantee" class="restaurants__card">
                     
@@ -61,10 +64,12 @@
                                 <h3 class="restaurants__name">La note enchantée</h3>
                                 <p class="restaurants__byline">Charonne</p>
                             </div>
-
-                            <div class="restaurants__fav"><i  class="far fa-heart"></i></div>
                         </div>
                     </a>
+                    <input class="heart_input" type="checkbox" name="res_la_note_enchantee" id="res_la_note_enchantee" >
+                    <label class="heart_label" for="res_la_note_enchantee"></label>
+                    <i class="far fa-heart unchecked"></i>
+                    <i class="fas fa-heart checked"></i>
                 </article>
                 <article id="a-la-francaise" class="restaurants__card ">
                     <a href="a-la-francaise.html">
@@ -74,11 +79,12 @@
                                 <h3 class="restaurants__name">A la française</h3>
                                 <p class="restaurants__byline">Cité rouge</p>                            
                             </div>
-
-                            <div class="restaurants__fav"><i  class="far fa-heart"></i></div>
-
                         </div>
                     </a>
+                    <input class="heart_input" type="checkbox" name="res_a_la_francaise" id="res_a_la_francaise" >
+                    <label class="heart_label" for="res_a_la_francaise"></label>
+                    <i class="far fa-heart unchecked"></i>
+                    <i class="fas fa-heart checked"></i>
                 </article>
                 <article id="le-delice-des-sens" class="restaurants__card ">
                     <a href="le-delice-des-sens.html">
@@ -88,11 +94,12 @@
                                 <h3 class="restaurants__name">Le délice des sens</h3>
                                 <p class="restaurants__byline">Folie-Méricourt</p>
                             </div>
- 
-                            <div class="restaurants__fav"><i class="far fa-heart"></i></div>
-
                         </div>
                     </a>
+                    <input class="heart_input" type="checkbox" name="res_le_delice_des_sens" id="res_le_delice_des_sens" >
+                    <label class="heart_label" for="res_le_delice_des_sens"></label>
+                    <i class="far fa-heart unchecked"></i>
+                    <i class="fas fa-heart checked"></i> 
                 </article>
             </section>
             
