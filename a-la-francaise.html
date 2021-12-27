@@ -15,7 +15,7 @@
     </head>
     <body>
         <header>
-            <a href="./index.html"><i class="fa fa-arrow-left"></i></a>
+            <a href="./index.html" class="return"><i class="fa fa-arrow-left"></i></a>
             <img src="./ressources/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
         </header>
         <main>
@@ -28,27 +28,41 @@
                     <h3 class="menu__etape__title">Entrées</h3>
                     <ul class="menu__item">
                         <li>
-                            <div class="menu__info">
+                            <label for="entree1" class="menu__info"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Tartare de poule acidulé</h4>
                                 <p class="menu__detail">Au zestes d'orange</p>
-                                <div class="menu__prix">25€</div>
                             </div>
+
+                            <div class="menu__prix">25€</div>
+                    
+                            <input type="checkbox" name="entree1" id="entree1"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="entree2"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Velouté de légumes d'antan</h4>
                                 <p class="menu__detail">Carotte,panais,topinambour</p>
-                                <div class="menu__prix">35€</div>
                             </div>
+
+                                <div class="menu__prix">35€</div>
+                            <input type="checkbox" name="entree2" id="entree2"  >
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="entree3"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Soupe à l'oignon</h4>
                                 <p class="menu__detail">Revisitée</p>
-                                <div class="menu__prix">20€</div>
                             </div>
+
+                            <div class="menu__prix">20€</div>
+                            <input type="checkbox" name="entree3" id="entree3">
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                     </ul>
@@ -57,30 +71,45 @@
                     <h3 class="menu__etape__title">Plats</h3>
                     <ul class="menu__item">
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info"  for="plat1"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Coquilles Saint-Jacques</h4>
                                 <p class="menu__detail">Accompagné d'une purée de panais</p>
-                                <div class="menu__prix">40€</div>
                             </div>
+
+                            <div class="menu__prix">40€</div>
                             
+                            <input type="checkbox" name="plat1" id="plat1"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="plat2"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Magret de canard</h4>
                                 <p class="menu__detail">Et son parmentier de pommes de terres</p>
-                                <div class="menu__prix">35€</div>
                             </div>
+
+                            <div class="menu__prix">35€</div>
                             
+                            <input type="checkbox" name="plat2" id="plat2"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
-                                <h4 class="menu__name">Pigenneau d'Ille-et-Vilaine</h4>
+
+                            <label class="menu__info" for="plat3"></label>
+                            <div class="menu__lines">
+                                <h4 class="menu__name">Pigeonneau d'Ille-et-Vilaine</h4>
                                 <p class="menu__detail">Sur son lit de gnocchis aux légumes</p>
-                                <div class="menu__prix">44€</div>
                             </div>
+
+                            <div class="menu__prix">44€</div>
                             
+                            <input type="checkbox" name="plat3" id="plat3"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                     </ul>
@@ -89,35 +118,41 @@
                     <h3 class="menu__etape__title">Desserts</h3>
                     <ul class="menu__item">
                         <li>
-                            <div class="menu__info">
+                            <label class="menu__info" for="dessert1"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Pétales de violette glacés</h4>
                                 <p class="menu__detail">Et purée de noisettes</p>
-                                <div class="menu__prix">18€</div>
                             </div>
-                            
+                            <div class="menu__prix">18€</div>
+                            <input type="checkbox" name="dessert1" id="dessert1"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="dessert2"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Fondant au chocolat</h4>
                                 <p class="menu__detail">Revisité</p>
-                                <div class="menu__prix">22€</div>
                             </div>
-                            
+                            <div class="menu__prix">22€</div>
+                            <input type="checkbox" name="dessert2" id="dessert2"  >
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="dessert3"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Millefeuille croustillant</h4>
-                                <p class="menu__detail">Myrtilles et pâte d'amende</p>
-                                <div class="menu__prix">23€</div>
+                                <p class="menu__detail">Myrtilles et pâte d'amande</p>
                             </div>
-                            
+                            <div class="menu__prix">23€</div>
+                            <input type="checkbox" name="dessert3" id="dessert3"  >
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                     </ul>
                 </article>
-                <div class="menu__button button"><a href="#">Commander</a></div>
+                <a href="#"><div class="menu__button button">Commander</div></a>
             </section>
 
 

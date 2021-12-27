@@ -11,11 +11,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap" rel="stylesheet">
 
 
-        <title>OhMyFood - La note enchantée</title>
+        <title>OhMyFood - La palette du gout</title>
     </head>
     <body>
         <header>
-            <a href="./index.html"><i class="fa fa-arrow-left"></i></a>
+            <a href="./index.html" class="return"><i class="fa fa-arrow-left"></i></a>
             <img src="./ressources/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
         </header>
         <main>
@@ -28,35 +28,54 @@
                     <h3 class="menu__etape__title">Entrées</h3>
                     <ul class="menu__item">
                         <li>
-                            <div class="menu__info">
+                            <label for="entree1" class="menu__info"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Ravioles au fois gras</h4>
                                 <p class="menu__detail">Accompagnés de leur crème à la truffe</p>
-                                <div class="menu__prix">25€</div>
                             </div>
+
+                            <div class="menu__prix">25€</div>
+                    
+                            <input type="checkbox" name="entree1" id="entree1"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="entree2"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Caviar osciètre</h4>
                                 <p class="menu__detail">Sur blini à la farine de blé noir</p>
-                                <div class="menu__prix">35€</div>
                             </div>
+
+                                <div class="menu__prix">35€</div>
+                            <input type="checkbox" name="entree2" id="entree2"  >
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="entree3"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Homard et espuma de yuzu</h4>
                                 <p class="menu__detail">Mariné aux zestes d'orange</p>
-                                <div class="menu__prix">20€</div>
                             </div>
+
+                            <div class="menu__prix">20€</div>
+                            <input type="checkbox" name="entree3" id="entree3">
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
-                                <h4 class="menu__name">Fois gras de canard cuit entier</h4>
+
+                            <label class="menu__info" for="entree4"></label>
+                            <div class="menu__lines">
+                                <h4 class="menu__name">Foie gras de canard cuit entier</h4>
                                 <p class="menu__detail">Confiture de figue et pain toasté</p>
-                                <div class="menu__prix">35€</div>
                             </div>
+
+                            <div class="menu__prix">35€</div>
+                            <input type="checkbox" name="entree4" id="entree4">
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                     </ul>
@@ -65,30 +84,45 @@
                     <h3 class="menu__etape__title">Plats</h3>
                     <ul class="menu__item">
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info"  for="plat1"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Noix de coquilles Saint-Jacques</h4>
                                 <p class="menu__detail">Sur lit de purée de céleri-rave</p>
-                                <div class="menu__prix">40€</div>
                             </div>
+
+                            <div class="menu__prix">40€</div>
                             
+                            <input type="checkbox" name="plat1" id="plat1"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="plat2"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Langoustine poêlée</h4>
                                 <p class="menu__detail">Purée de patate douce</p>
-                                <div class="menu__prix">35€</div>
                             </div>
+
+                            <div class="menu__prix">35€</div>
                             
+                            <input type="checkbox" name="plat2" id="plat2"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="plat3"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Mijoté de queue de boeuf</h4>
-                                <p class="menu__detail">Et riz sauvage aux zestes de citron<p>
-                                <div class="menu__prix">44€</div>
+                                <p class="menu__detail">Et riz sauvage aux zestes de citron</p>
                             </div>
+
+                            <div class="menu__prix">44€</div>
                             
+                            <input type="checkbox" name="plat3" id="plat3"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                     </ul>
@@ -97,35 +131,41 @@
                     <h3 class="menu__etape__title">Desserts</h3>
                     <ul class="menu__item">
                         <li>
-                            <div class="menu__info">
+                            <label class="menu__info" for="dessert1"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Macaron noisette et chocolat</h4>
                                 <p class="menu__detail">Glace au caramel brun et sel de Guérande</p>
-                                <div class="menu__prix">18€</div>
                             </div>
-                            
+                            <div class="menu__prix">18€</div>
+                            <input type="checkbox" name="dessert1" id="dessert1"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="dessert2"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Baba au Rhum revisité</h4>
                                 <p class="menu__detail">Avec son coulis de citron</p>
-                                <div class="menu__prix">22€</div>
                             </div>
-                            
+                            <div class="menu__prix">22€</div>
+                            <input type="checkbox" name="dessert2" id="dessert2"  >
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="dessert3"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Tarte au citron meringuée</h4>
                                 <p class="menu__detail">Destructurée</p>
-                                <div class="menu__prix">23€</div>
                             </div>
-                            
+                            <div class="menu__prix">23€</div>
+                            <input type="checkbox" name="dessert3" id="dessert3"  >
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                     </ul>
                 </article>
-                <div class="menu__button button"><a href="#">Commander</a></div>
+                <a href="#"><div class="menu__button button">Commander</div></a>
             </section>
 
 

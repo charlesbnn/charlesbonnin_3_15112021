@@ -15,11 +15,11 @@
     </head>
     <body>
         <header>
-            <a href="./index.html"><i class="fa fa-arrow-left"></i></a>
+            <a href="./index.html" class="return"><i class="fa fa-arrow-left"></i></a>
             <img src="./ressources/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
         </header>
         <main>
-            <img src="ressources/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="le délice des sens">
+            <img src="ressources/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
             
             <section class="menu">
                 <h2 class="menu__title">Le délice des sens</h2>
@@ -28,27 +28,41 @@
                     <h3 class="menu__etape__title">Entrées</h3>
                     <ul class="menu__item">
                         <li>
-                            <div class="menu__info">
+                            <label for="entree1" class="menu__info"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Tartare de thon</h4>
                                 <p class="menu__detail">Assaisonné au yuzu</p>
-                                <div class="menu__prix">25€</div>
                             </div>
+
+                            <div class="menu__prix">25€</div>
+                    
+                            <input type="checkbox" name="entree1" id="entree1"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="entree2"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Bouchée de homard croustillant</h4>
                                 <p class="menu__detail">Et sa farandole de petits légumes</p>
-                                <div class="menu__prix">35€</div>
                             </div>
+
+                                <div class="menu__prix">35€</div>
+                            <input type="checkbox" name="entree2" id="entree2"  >
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="entree3"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Veloutés en cêpes</h4>
                                 <p class="menu__detail">Aux truffes</p>
-                                <div class="menu__prix">20€</div>
                             </div>
+
+                            <div class="menu__prix">20€</div>
+                            <input type="checkbox" name="entree3" id="entree3">
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                     </ul>
@@ -57,30 +71,45 @@
                     <h3 class="menu__etape__title">Plats</h3>
                     <ul class="menu__item">
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info"  for="plat1"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Poulet rôti aux herbes de Provence</h4>
                                 <p class="menu__detail">Et sa crème de truffe</p>
-                                <div class="menu__prix">40€</div>
                             </div>
+
+                            <div class="menu__prix">40€</div>
                             
+                            <input type="checkbox" name="plat1" id="plat1"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="plat2"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Langouste rôtie</h4>
                                 <p class="menu__detail">Et ses légumes de saison</p>
-                                <div class="menu__prix">35€</div>
                             </div>
+
+                            <div class="menu__prix">35€</div>
                             
+                            <input type="checkbox" name="plat2" id="plat2"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="plat3"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Côte de boeuf angus</h4>
                                 <p class="menu__detail">Et sa purée de panais</p>
-                                <div class="menu__prix">44€</div>
                             </div>
+
+                            <div class="menu__prix">44€</div>
                             
+                            <input type="checkbox" name="plat3" id="plat3"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                     </ul>
@@ -89,35 +118,41 @@
                     <h3 class="menu__etape__title">Desserts</h3>
                     <ul class="menu__item">
                         <li>
-                            <div class="menu__info">
+                            <label class="menu__info" for="dessert1"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Farandole de desserts</h4>
                                 <p class="menu__detail">Du chef</p>
-                                <div class="menu__prix">18€</div>
                             </div>
-                            
+                            <div class="menu__prix">18€</div>
+                            <input type="checkbox" name="dessert1" id="dessert1"  >
+
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="dessert2"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Crème brulée</h4>
                                 <p class="menu__detail">Revisitée</p>
-                                <div class="menu__prix">22€</div>
                             </div>
-                            
+                            <div class="menu__prix">22€</div>
+                            <input type="checkbox" name="dessert2" id="dessert2"  >
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                         <li>
-                            <div class="menu__info">
+
+                            <label class="menu__info" for="dessert3"></label>
+                            <div class="menu__lines">
                                 <h4 class="menu__name">Tiramisu</h4>
                                 <p class="menu__detail">A la noisette</p>
-                                <div class="menu__prix">23€</div>
                             </div>
-                            
+                            <div class="menu__prix">23€</div>
+                            <input type="checkbox" name="dessert3" id="dessert3"  >
                             <div class="select"><i class="fa fa-check"></i></div>
                         </li>
                     </ul>
                 </article>
-                <div class="menu__button button"><a href="#">Commander</a></div>
+                <a href="#"><div class="menu__button button">Commander</div></a>
             </section>
 
 

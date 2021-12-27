@@ -31,6 +31,7 @@ header img {
   margin: 0 auto;
   min-width: 100px;
   width: 40%;
+  max-width: 250px;
 }
 
 header a i {
@@ -50,7 +51,7 @@ h2 {
   margin-bottom: 25px;
 }
 
-a {
+a:not(.return) {
   display: block;
   width: 250px;
   color: #ffffff;
@@ -59,7 +60,7 @@ a {
   transition: all 250ms ease-in;
 }
 
-a .button {
+a:not(.return) .button {
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   -webkit-box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
@@ -331,7 +332,10 @@ a .restaurants__pres > .restaurants__txt > .restaurants__byline {
 
 /*RESTAURANTS*/
 main img {
-  max-width: 100%;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   z-index: 10;
 }
 
@@ -367,6 +371,11 @@ main img {
   margin-top: 10px;
   font-weight: lighter;
   font-size: 25px;
+}
+
+.menu__etape {
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 .menu__etape h3 {
@@ -506,6 +515,30 @@ main img {
 .menu__item li input[type="checkbox"]:checked + div.select i {
   -webkit-animation: rotate 250ms linear 1ms 1 normal forwards;
           animation: rotate 250ms linear 1ms 1 normal forwards;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu > a {
+    width: 100%;
+  }
+  __etape {
+    width: 25%;
+    max-width: 400px;
+  }
 }
 
 /*FOOTER*/
