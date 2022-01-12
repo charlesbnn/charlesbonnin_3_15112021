@@ -165,7 +165,7 @@ a:not(.return){
         
     }
     ul li {
-        width: 95%;
+        // width: 95%;
         padding: 20px 25px;
         margin-top: 20px;
         background-color: $bg-1;
@@ -179,7 +179,7 @@ a:not(.return){
     }
     ul li:hover{
         background-color: $primaire--hov;
-    }
+    }   
     ul li:first-child{
         @include num-liste('before','1');
     }

@@ -149,7 +149,6 @@ a:not(.return) .button {
 }
 
 .fonctionnement ul li {
-  width: 95%;
   padding: 20px 25px;
   margin-top: 20px;
   background-color: #f6f6f6;
@@ -538,6 +537,23 @@ main img {
   __etape {
     width: 25%;
     max-width: 400px;
+  }
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .restaurants > a {
+    width: 100%;
   }
 }
 
