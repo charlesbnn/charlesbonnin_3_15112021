@@ -488,7 +488,15 @@ main img{
         width:25%;
         max-width: 400px;
     }
-    
+    .restaurants{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        & > a{
+            width: 100%;
+        }
+    }
 }
 /*FOOTER*/
 footer{
