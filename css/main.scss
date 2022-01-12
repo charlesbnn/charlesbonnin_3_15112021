@@ -113,9 +113,9 @@ a:not(.return){
     }
  
 }
-.hero > a:hover{
+.hero > a:hover,.menu__button:hover{
     opacity: 0.9;
-    transform: scale(1.02);
+    transform: scale(1.1);
 }
 
 /*ACCEUIL*/
@@ -220,6 +220,7 @@ a:not(.return){
                 border-top-right-radius: 20px;
                 max-height: 175px;
                 object-fit: cover;
+                max-width: 1000px;
             }
            
         }
@@ -262,11 +263,14 @@ a:not(.return){
 
            @include btn-gradient();    
             background-clip: text;
+            -webkit-background-clip: text;
             color: transparent;
 
         }
         input[type="checkbox"].heart_input:checked ~ i.checked {
             opacity: 1;
+            background-clip: text;
+            -webkit-background-clip: text;
         }
         input[type="checkbox"].heart_input:checked ~ i.unchecked {
             opacity: 0;
@@ -493,8 +497,12 @@ main img{
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        & > a{
+        & > h2{
             width: 100%;
+        }
+        &__card{
+            width:40%;
+            position: relative;
         }
     }
 }

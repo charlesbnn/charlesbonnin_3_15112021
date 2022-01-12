@@ -77,10 +77,10 @@ a:not(.return) .button {
   transition: all 250ms ease-in;
 }
 
-.hero > a:hover {
+.hero > a:hover, .menu__button:hover {
   opacity: 0.9;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /*ACCEUIL*/
@@ -245,6 +245,7 @@ a:not(.return) .button {
   max-height: 175px;
   -o-object-fit: cover;
      object-fit: cover;
+  max-width: 1000px;
 }
 
 .restaurants__card a.new::before {
@@ -290,11 +291,14 @@ a:not(.return) .button {
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 
 .restaurants__card input[type="checkbox"].heart_input:checked ~ i.checked {
   opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .restaurants__card input[type="checkbox"].heart_input:checked ~ i.unchecked {
@@ -552,8 +556,12 @@ main img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .restaurants > a {
+  .restaurants > h2 {
     width: 100%;
+  }
+  .restaurants__card {
+    width: 40%;
+    position: relative;
   }
 }
 
