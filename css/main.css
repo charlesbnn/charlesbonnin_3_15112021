@@ -606,10 +606,6 @@ footer nav ul li a {
           animation: loader_animation 1s linear 3s 1 normal forwards;
 }
 
-#loader {
-  display: none !important;
-}
-
 #loader i {
   display: inline-block;
   font-size: 40px;
