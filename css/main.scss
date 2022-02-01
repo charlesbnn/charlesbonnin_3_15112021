@@ -458,6 +458,7 @@ main img{
             }
             // visibility:hidden ;     
         }
+        
         input[type="checkbox"]:checked + div.select{
             animation: select  250ms linear 0ms 1 normal forwards ;
             & i{
@@ -476,6 +477,44 @@ main img{
         // &:hover .menu__prix, &:active .menu__prix{
         //     animation: select-li 250ms linear 500ms 1 normal forwards ;
         // }
+    }
+    .heart_label{
+        width: 25px;
+        height:25px;
+    }
+    i.fa-heart,.heart_label{
+        position: absolute;
+
+        right:100px;
+        margin-top: 15px;
+        font-size: 25px;
+    }
+    i.fa-heart{
+        z-index: 10;
+    }
+    .heart_label{
+        z-index: 20;
+    }
+    i.checked{
+        opacity: 0;
+        width: 27px;
+        height:27px;
+        right:100px;
+        margin-top: 15px;
+
+       @include btn-gradient();    
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+
+    }
+    input[type="checkbox"].heart_input:checked ~ i.checked {
+        opacity: 1;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+    input[type="checkbox"].heart_input:checked ~ i.unchecked {
+        opacity: 0;
     }
 }
 @media screen and (min-width:768px) {

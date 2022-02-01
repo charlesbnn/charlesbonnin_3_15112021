@@ -520,6 +520,49 @@ main img {
           animation: rotate 250ms linear 1ms 1 normal forwards;
 }
 
+.menu .heart_label {
+  width: 25px;
+  height: 25px;
+}
+
+.menu i.fa-heart, .menu .heart_label {
+  position: absolute;
+  right: 100px;
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.menu i.fa-heart {
+  z-index: 10;
+}
+
+.menu .heart_label {
+  z-index: 20;
+}
+
+.menu i.checked {
+  opacity: 0;
+  width: 27px;
+  height: 27px;
+  right: 100px;
+  margin-top: 15px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.menu input[type="checkbox"].heart_input:checked ~ i.checked {
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.menu input[type="checkbox"].heart_input:checked ~ i.unchecked {
+  opacity: 0;
+}
+
 @media screen and (min-width: 768px) {
   .menu {
     display: -webkit-box;
