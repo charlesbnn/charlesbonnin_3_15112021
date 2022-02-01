@@ -527,7 +527,7 @@ main img {
 
 .menu i.fa-heart, .menu .heart_label {
   position: absolute;
-  right: 100px;
+  right: 10%;
   margin-top: 15px;
   font-size: 25px;
 }
@@ -544,7 +544,7 @@ main img {
   opacity: 0;
   width: 27px;
   height: 27px;
-  right: 100px;
+  right: 10%;
   margin-top: 14px;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);

@@ -485,7 +485,7 @@ main img{
     i.fa-heart,.heart_label{
         position: absolute;
 
-        right:100px;
+        right:10%;
         margin-top: 15px;
         font-size: 25px;
     }
@@ -499,7 +499,7 @@ main img{
         opacity: 0;
         width: 27px;
         height:27px;
-        right:100px;
+        right:10%;
         margin-top: 14px;
 
        @include btn-gradient();    
