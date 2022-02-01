@@ -406,8 +406,8 @@ main img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .menu__item li:first-child {
@@ -495,8 +495,8 @@ main img {
   margin-top: 0;
   margin-bottom: 0;
   padding: 20px 5px;
-  -webkit-transition: all 250ms linear 0ms 1 normal forwards;
-  transition: all 250ms linear 0ms 1 normal forwards;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
 .menu__item li .select i {

@@ -362,7 +362,7 @@ main img{
         padding: 0 10px;
         margin-bottom: 15px;
         display: flex;
-        flex-wrap: no-wrap ;
+        flex-wrap: nowrap ;
         &:first-child{
             @include animation-fadein(50ms);
         }
@@ -444,7 +444,7 @@ main img{
             margin-top: 0;
             margin-bottom: 0;
             padding: 20px 5px;
-            transition: all 250ms linear 0ms 1 normal forwards;
+            transition: all 250ms linear;
 
             i{
                 display: inline-block;
