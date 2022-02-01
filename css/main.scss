@@ -500,7 +500,7 @@ main img{
         width: 27px;
         height:27px;
         right:100px;
-        margin-top: 15px;
+        margin-top: 14px;
 
        @include btn-gradient();    
         background-clip: text;
@@ -510,6 +510,8 @@ main img{
     }
     input[type="checkbox"].heart_input:checked ~ i.checked {
         opacity: 1;
+        font-weight: 900;
+
         background-clip: text;
         -webkit-background-clip: text;
     }

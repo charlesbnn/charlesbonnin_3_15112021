@@ -545,7 +545,7 @@ main img {
   width: 27px;
   height: 27px;
   right: 100px;
-  margin-top: 15px;
+  margin-top: 14px;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   background-clip: text;
@@ -555,6 +555,7 @@ main img {
 
 .menu input[type="checkbox"].heart_input:checked ~ i.checked {
   opacity: 1;
+  font-weight: 900;
   background-clip: text;
   -webkit-background-clip: text;
 }
