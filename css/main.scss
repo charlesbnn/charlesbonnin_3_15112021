@@ -22,7 +22,6 @@ $bg-2 :#eaeaea;
 }
 @mixin card-shadow{
     box-shadow: 0 4px 8px 2px rgba(0,0,0,0.20);
-
 }    
 @mixin num-liste($element,$chiffre) {
     &:#{$element}, &::#{$element} {
@@ -32,7 +31,7 @@ $bg-2 :#eaeaea;
         position: relative;
         right:35px;
         background-color: $primaire;
-        padding: 6px;
+        padding: 4px 6px;
         border-radius: 50%;
         display: inline-block;
         text-align: center;
@@ -40,7 +39,7 @@ $bg-2 :#eaeaea;
     }
   }
 @mixin animation-fadein($delay){
-    animation: fadein 500ms ease-out $delay 1 normal forwards ;
+    animation: fadein 1s ease-out $delay 1 normal forwards ;
 }
 /*FIN COULEURS*/
 *{
@@ -180,6 +179,9 @@ a:not(.return){
     ul li:hover{
         background-color: $primaire--hov;
     }   
+    ul li:hover i{
+        color: $primaire
+    }
     ul li:first-child{
         @include num-liste('before','1');
     }
@@ -271,11 +273,26 @@ a:not(.return){
             opacity: 1;
             background-clip: text;
             -webkit-background-clip: text;
+            z-index: 5;
         }
         input[type="checkbox"].heart_input:checked ~ i.unchecked {
             opacity: 0;
         }
-
+        input[type="checkbox"].heart_input:checked ~ i.checked + div.hider {
+            animation: up 1s ease-out 0ms 1 normal forwards;
+            background-color: white;
+            z-index: 15;
+        }
+       
+          
+        .hider{
+            position: absolute;
+            right: 55px;
+            margin-top: 200px;
+            background: transparent;
+            width: 25px;
+            height: 25px;
+        }
     }
     a &__pres{
         padding: 15px;
@@ -363,17 +380,18 @@ main img{
         margin-bottom: 15px;
         display: flex;
         flex-wrap: nowrap ;
+        opacity: 0;
         &:first-child{
-            @include animation-fadein(50ms);
+            @include animation-fadein(500ms);
         }
         &:nth-child(2){
-            @include animation-fadein(100ms);
+            @include animation-fadein(800ms);
         }
         &:nth-child(3){
-            @include animation-fadein(200ms);
+            @include animation-fadein(1100ms);
         }
         &:nth-child(4){
-            @include animation-fadein(300ms);
+            @include animation-fadein(1400ms);
         }
 
         // & > div:not(.select){
@@ -450,11 +468,8 @@ main img{
                 display: inline-block;
                 vertical-align: middle;
                 color: white;
-                margin : 0;
-                border-radius: 50%;
-                padding: 4px;
-                border: 2px solid white;
-                font-size: 14px;
+                margin-left :3px;
+                font-size: 24px;
             }
             // visibility:hidden ;     
         }
@@ -514,9 +529,23 @@ main img{
 
         background-clip: text;
         -webkit-background-clip: text;
+        z-index: 5;
+
     }
     input[type="checkbox"].heart_input:checked ~ i.unchecked {
         opacity: 0;
+    }
+    input[type="checkbox"].heart_input:checked ~ i.checked + div.hider {
+        animation: up 1s ease-out 0ms 1 normal forwards;
+        background-color: $bg-1;
+        z-index: 15;
+    }
+    .hider{
+        position: absolute;
+        right:10%;
+        width: 27px;
+        height: 25px;
+        top: 33px;
     }
 }
 @media screen and (min-width:768px) {
@@ -584,9 +613,9 @@ footer{
     z-index: 1000;
     animation: loader_animation 1s linear 3s 1 normal forwards ;
  }
-//  #loader{
-//      display: none !important;
-//  }
+ #loader{
+     display: none !important;
+ }
  #loader i{
     display: inline-block;
     font-size : 40px;
@@ -617,7 +646,7 @@ footer{
      }
      to{
         opacity: 1;
-        width:45px;
+        width:60px;
         max-width: 60px;
         margin-left: 5px; 
      }
@@ -642,3 +671,13 @@ footer{
 
     }
 }
+@keyframes up {
+    from {
+      height: 25px;
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+      height: 0px;
+    }
+  }

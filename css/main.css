@@ -163,6 +163,10 @@ a:not(.return) .button {
   background-color: #9256dc28;
 }
 
+.fonctionnement ul li:hover i {
+  color: #9356DC;
+}
+
 .fonctionnement ul li:first-child:before, .fonctionnement ul li:first-child::before {
   content: "1";
   color: white;
@@ -170,7 +174,7 @@ a:not(.return) .button {
   position: relative;
   right: 35px;
   background-color: #9356DC;
-  padding: 6px;
+  padding: 4px 6px;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
@@ -184,7 +188,7 @@ a:not(.return) .button {
   position: relative;
   right: 35px;
   background-color: #9356DC;
-  padding: 6px;
+  padding: 4px 6px;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
@@ -198,7 +202,7 @@ a:not(.return) .button {
   position: relative;
   right: 35px;
   background-color: #9356DC;
-  padding: 6px;
+  padding: 4px 6px;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
@@ -299,10 +303,27 @@ a:not(.return) .button {
   opacity: 1;
   background-clip: text;
   -webkit-background-clip: text;
+  z-index: 5;
 }
 
 .restaurants__card input[type="checkbox"].heart_input:checked ~ i.unchecked {
   opacity: 0;
+}
+
+.restaurants__card input[type="checkbox"].heart_input:checked ~ i.checked + div.hider {
+  -webkit-animation: up 1s ease-out 0ms 1 normal forwards;
+          animation: up 1s ease-out 0ms 1 normal forwards;
+  background-color: white;
+  z-index: 15;
+}
+
+.restaurants__card .hider {
+  position: absolute;
+  right: 55px;
+  margin-top: 200px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
 }
 
 a .restaurants__pres {
@@ -408,26 +429,27 @@ main img {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  opacity: 0;
 }
 
 .menu__item li:first-child {
-  -webkit-animation: fadein 500ms ease-out 50ms 1 normal forwards;
-          animation: fadein 500ms ease-out 50ms 1 normal forwards;
+  -webkit-animation: fadein 1s ease-out 500ms 1 normal forwards;
+          animation: fadein 1s ease-out 500ms 1 normal forwards;
 }
 
 .menu__item li:nth-child(2) {
-  -webkit-animation: fadein 500ms ease-out 100ms 1 normal forwards;
-          animation: fadein 500ms ease-out 100ms 1 normal forwards;
+  -webkit-animation: fadein 1s ease-out 800ms 1 normal forwards;
+          animation: fadein 1s ease-out 800ms 1 normal forwards;
 }
 
 .menu__item li:nth-child(3) {
-  -webkit-animation: fadein 500ms ease-out 200ms 1 normal forwards;
-          animation: fadein 500ms ease-out 200ms 1 normal forwards;
+  -webkit-animation: fadein 1s ease-out 1100ms 1 normal forwards;
+          animation: fadein 1s ease-out 1100ms 1 normal forwards;
 }
 
 .menu__item li:nth-child(4) {
-  -webkit-animation: fadein 500ms ease-out 300ms 1 normal forwards;
-          animation: fadein 500ms ease-out 300ms 1 normal forwards;
+  -webkit-animation: fadein 1s ease-out 1400ms 1 normal forwards;
+          animation: fadein 1s ease-out 1400ms 1 normal forwards;
 }
 
 .menu__item li > div.menu__lines {
@@ -503,11 +525,8 @@ main img {
   display: inline-block;
   vertical-align: middle;
   color: white;
-  margin: 0;
-  border-radius: 50%;
-  padding: 4px;
-  border: 2px solid white;
-  font-size: 14px;
+  margin-left: 3px;
+  font-size: 24px;
 }
 
 .menu__item li input[type="checkbox"]:checked + div.select {
@@ -558,10 +577,26 @@ main img {
   font-weight: 900;
   background-clip: text;
   -webkit-background-clip: text;
+  z-index: 5;
 }
 
 .menu input[type="checkbox"].heart_input:checked ~ i.unchecked {
   opacity: 0;
+}
+
+.menu input[type="checkbox"].heart_input:checked ~ i.checked + div.hider {
+  -webkit-animation: up 1s ease-out 0ms 1 normal forwards;
+          animation: up 1s ease-out 0ms 1 normal forwards;
+  background-color: #f6f6f6;
+  z-index: 15;
+}
+
+.menu .hider {
+  position: absolute;
+  right: 10%;
+  width: 27px;
+  height: 25px;
+  top: 33px;
 }
 
 @media screen and (min-width: 768px) {
@@ -650,6 +685,10 @@ footer nav ul li a {
           animation: loader_animation 1s linear 3s 1 normal forwards;
 }
 
+#loader {
+  display: none !important;
+}
+
 #loader i {
   display: inline-block;
   font-size: 40px;
@@ -693,7 +732,7 @@ footer nav ul li a {
   }
   to {
     opacity: 1;
-    width: 45px;
+    width: 60px;
     max-width: 60px;
     margin-left: 5px;
   }
@@ -707,7 +746,7 @@ footer nav ul li a {
   }
   to {
     opacity: 1;
-    width: 45px;
+    width: 60px;
     max-width: 60px;
     margin-left: 5px;
   }
@@ -758,6 +797,28 @@ footer nav ul li a {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes up {
+  from {
+    height: 25px;
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    height: 0px;
+  }
+}
+
+@keyframes up {
+  from {
+    height: 25px;
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    height: 0px;
   }
 }
 /*# sourceMappingURL=main.css.map */
